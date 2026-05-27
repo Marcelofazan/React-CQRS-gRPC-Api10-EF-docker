@@ -14,9 +14,12 @@ Exemplo de criação de Arquitetura distribuida CQRS utilizando banco de dados M
 
 #### Execução da aplicação
 
-```bash 
+VSCode Terminal (1)
+```bash
 docker-compose up --build  
-
+```
+VSCode Terminal (2)
+```bash
 dotnet build
 
 dotnet add Sistema.Producao.API package Microsoft.EntityFrameworkCore.Design
@@ -28,7 +31,9 @@ dotnet ef database update --project InfraEstrutura.Producao.DataModels --startup
 cd InfraEstrutura.Producao.Server 
 
 dotnet run 
-
+```
+VSCode Terminal (3)
+```bash
 cd Sistema.Producao.API
 
 dotnet run --launch-profile https
