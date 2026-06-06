@@ -9,7 +9,7 @@ Exemplo de criação de API no padrão de Arquitetura CQRS, desenvolvida em .NET
 | **CQRS** | É um padrão arquitetural que separa as operações de escrita (comandos) das operações de leitura (consultas) |
 | **Mediatr** | Desacoplar classes, permitindo que diferentes componentes de um sistema se comuniquem através de um ponto central (o mediador) |
 
-## 🔄 Executar a aplicação [PRODUÇÃO]
+### 🔄 Executar a aplicação [PRODUÇÃO]
 
 VSCode Terminal [1]
 ```bash
@@ -105,7 +105,7 @@ dotnet test Sistema.Producao.Testes/Sistema.Producao.Testes.csproj
 Conexão com o Banco de dados 
 - Com o Servidor do **Postgres** parado em Serviços, crie uma conexão Docker Postgres para 127.0.0.1 e informe o Usuário e Senha 
 
-## 🔄 Executar a aplicação [REPORTER]
+### 🔄 Executar a aplicação [REPORTER]
 
 VSCode Terminal [1]
 ```bash
@@ -160,6 +160,8 @@ https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-04
 ```
 
 #### Executar Testes Unitários
+
+- Necessário ter dados de consolidação, para passar todos os testes. 
 ```bash
 dotnet test Sistema.Reporter.Testes/Sistema.Reporter.Testes.csproj
 ```
@@ -169,6 +171,16 @@ Conexão com o Banco de dados
 - No o Servidor do **Postgres** parado em Serviços, crie uma conexão em porta diferente **mongodb://127.0.0.1:27018/** .
 
 
-## 🔄 Executar a aplicação [FRONTEND]
+### 🔄 Executar a aplicação [FRONTEND]
 
+- Recuperar as dependencias do projeto node_modules .
+```bash
+npm install
+```
 
+Executar o Build do Projeto
+```bash
+npm start
+```
+
+O projeto ira rodar em **localhost:3000**
