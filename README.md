@@ -9,7 +9,7 @@ Exemplo de API Arquitetura CQRS com comunicação gRPC e MediatR, mensageria Rab
 | **Mediatr** | Desacoplar classes, permitindo que diferentes componentes de um sistema se comuniquem através de um ponto central (o mediador) |
 | **RabbitMQ** | Agente de mensagens (message broker) ele atua como um carteiro altamente inteligente e seguro  |
 
-#### Requisitos do Projeto
+#### 💬 Requisitos do Projeto
 - Necessário **Docker** instalado.
   
 ## 📁 Producao
@@ -100,7 +100,7 @@ Apagar Cliente
 https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6
 ```
 
-#### Executar Testes Unitários
+#### 🧪 Executar Testes Unitários
 ```bash 
 dotnet test Sistema.Producao.Testes/Sistema.Producao.Testes.csproj
 ```
@@ -164,7 +164,7 @@ Exemplo chamada Relatório de consolidação, ele será gravado no banco de dado
 https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-04
 ```
 
-#### Executar Testes Unitários
+#### 🧪 Executar Testes Unitários
 
 - Necessário ter dados de consolidação, para passar todos os testes. 
 ```bash
