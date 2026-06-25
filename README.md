@@ -11,6 +11,7 @@ Exemplo de API Arquitetura CQRS com comunicação gRPC e MediatR, mensageria Rab
 
 #### 💬 Requisitos do Projeto
 - Necessário **Docker** instalado.
+- Realizar Migrations EntityFramework .NET
   
 ## 📁 Producao
 #### 🔄 Executar a aplicação
