@@ -141,7 +141,7 @@ docker compose down
 
 Relatório de consolidação, ele será consultado no banco de dados MongoDB
 
-```postman
+```sql
 https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26
 ```
 
