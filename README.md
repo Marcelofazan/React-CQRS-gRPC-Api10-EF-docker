@@ -178,8 +178,8 @@ dotnet dev-certs https --trust
 
 #### ⚙️ Configuração - RabbitMQ Conflito Portas e Logout 
 RabbitMQ por padrão possui para acesso Login: **guest** **Senha: **guest** 
-- Caso o RabbitMQ não estar atualizando, refaça o login e verifique as portas
-- Caso houver falhas na criação do Conteiner na porta do RabbitMQ execute no PowerShell executar . 
+- Caso o RabbitMQ não estar atualizando, ou houver falhas na criação do Conteiner, verifique as portas e execute no refaça o login.
+- Para eliminar execuções de portas no PowerShell executar: 
 ```bash 
 netstat -ano | findstr 5672
 ```
