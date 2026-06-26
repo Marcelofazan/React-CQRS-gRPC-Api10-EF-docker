@@ -60,9 +60,7 @@ docker compose down
 
 RabbitMQ por padrão possui para acesso Login: **guest** **Senha: **guest** 
 
-
-Registrar Cliente
-https://localhost:7274/api/Cliente/create
+- Registrar Cliente **https://localhost:7274/api/Cliente/create**
 ```bash 
 {
   "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -75,10 +73,9 @@ https://localhost:7274/api/Cliente/create
 }
 ```
 
-Atualizar Cliente
+- Atualizar Cliente **https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6**
 ```bash 
 
-https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6
 {
   "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "nome": "Marcelo",
@@ -90,10 +87,7 @@ https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6
 }
 ```
 
-Apagar Cliente
-```bash 
-https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6
-```
+- Apagar Cliente **https://localhost:7274/api/Cliente/3fa85f64-5717-4562-b3fc-2c963f66afa6**
 
 #### 🧪 Executar Testes Unitários
 ```bash 
@@ -147,12 +141,13 @@ docker compose down
 | **RabbitMQ** | http://localhost:15672 | **API** |
 
 Exemplo chamada Relatório de consolidação, ele será gravado no banco de dados MongoDB
+
+#### 🧪 Executar Endpoints
 ```bash 
-https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-04
+https://localhost:7080/api/Consolidacao/consolidacao?data=2026-06-26
 ```
 
 #### 🧪 Executar Testes Unitários
-
 - Necessário ter dados de consolidação, para passar todos os testes. 
 ```bash
 dotnet test Sistema.Reporter.Testes/Sistema.Reporter.Testes.csproj
