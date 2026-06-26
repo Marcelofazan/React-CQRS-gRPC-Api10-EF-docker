@@ -13,6 +13,12 @@ Exemplo de projeto com Arquitetura CQRS com comunicação gRPC e MediatR, mensag
 - Necessário **Docker** instalado.
 - Realizar Migrations EntityFramework .NET
 - Necessário acomplamento de serviços, o Reporter depende da execução de Producao.
+
+VSCODE Abrir 3 Instancias do programa
+|-------|
+        |-------| Producao
+        |-------| Reporter
+        |-------| Frontend
   
 ## 📁 Producao
 #### 🔄 Executar a aplicação
@@ -23,9 +29,8 @@ VSCode Terminal [1]
 docker-compose up --build  
 ```
 VSCode Terminal [2]
-- Iniciar Servidor 
+- Iniciar Server 
 ```bash
-cd Producao 
 dotnet ef migrations add InitialCreate --project InfraEstrutura.Producao.DataModels --startup-project Sistema.Producao.API
 dotnet ef database update --project InfraEstrutura.Producao.DataModels --startup-project Sistema.Producao.API
 cd InfraEstrutura.Producao.Server 
@@ -107,19 +112,21 @@ dotnet ef database drop --project InfraEstrutura.Producao.Server --startup-proje
 #### 🔄 Executar a aplicação
 
 VSCode Terminal [1]
+- Iniciar Docker 
 ```bash
 docker-compose up --build  
 ```
 
 VSCode Terminal [2]
+- Iniciar Server ( Raiz Projeto )
 ```bash 
-cd Reporter
 dotnet ef migrations add InitialCreate --project InfraEstrutura.Reporter.DataModels --startup-project Sistema.Reporter.Server
 cd Sistema.Reporter.Server
 dotnet run 
 ```
 
 VSCode Terminal [3]
+- Iniciar API
 ```bash 
 cd Sistema.Reporter.API
 
