@@ -109,27 +109,11 @@ VSCode Terminal [1]
 docker-compose up --build  
 ```
 
-- Caso houver falhas na criação do Conteiner na porta do RabbitMQ execute no PowerShell executar . 
-```bash 
-netstat -ano | findstr 5672
-```
-O comando vai mostrar um número no final da linha (o PID). Elimine o processo usando:
-```bash 
-taskkill /PID <NUMERO_DO_PID> /F
-```
-
 VSCode Terminal [2]
 ```bash 
-dotnet build
-
-dotnet add Sistema.Reporter.Server package Microsoft.EntityFrameworkCore.Design
-
+cd Reporter
 dotnet ef migrations add InitialCreate --project InfraEstrutura.Reporter.DataModels --startup-project Sistema.Reporter.Server
-
-dotnet ef database update --project InfraEstrutura.Reporter.DataModels --startup-project Sistema.Reporter.Server
-
 cd Sistema.Reporter.Server
-
 dotnet run 
 ```
 
@@ -175,6 +159,12 @@ Conexão com o Banco de dados
 ```bash
 npm install
 ```
+Executar o Build do Projeto
+```bash
+npm start
+```
+
+O projeto ira rodar em **localhost:3000**
 
 #### ⚙️ Configuração - Certificados
 - Caso for necessário renovar o certificado SSL 
@@ -182,10 +172,3 @@ npm install
 dotnet dev-certs https --clean
 dotnet dev-certs https --trust
 ```
-
-Executar o Build do Projeto
-```bash
-npm start
-```
-
-O projeto ira rodar em **localhost:3000**
